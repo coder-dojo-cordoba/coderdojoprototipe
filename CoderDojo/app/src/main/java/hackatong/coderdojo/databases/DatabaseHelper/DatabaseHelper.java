@@ -9,7 +9,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     String sqlCreateTypeUserParents= "CREATE TABLE typeUsers"+
             "(id_typeUser INTEGER PRIMARY KEY NOT NULL, " +
             "typeUser TEXT" +
-            "description TEXT)";
+            "description TEXT)" ;
 
     String sqlCreateusersParents = "CREATE TABLE usersParents " +
             "(id_Parent INTEGER PRIMARY KEY NOT NULL, " +

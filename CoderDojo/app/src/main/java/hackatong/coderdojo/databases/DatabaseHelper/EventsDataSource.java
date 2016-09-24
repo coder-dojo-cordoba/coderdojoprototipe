@@ -1,4 +1,4 @@
-package hackatong.coderdojo.databases.DatabaseHelper;
+package hackatong.coderdojo.databases
 
 import android.content.ContentValues;
 import android.database.Cursor;
