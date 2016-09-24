@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class TypeUserParentsDataSource {
 
     private static final String TABLE_NAME = "TypeUsers";
-    private static final String COLUMND_ID = "id_TypeUser";
+    private static final String COLUMND_ID = "id_TypeUserParents";
     private static final String COLUMN_TYPE_USER = "typeUser";
     private static final String COLUMN_DESCRIPTION = "description";
 
