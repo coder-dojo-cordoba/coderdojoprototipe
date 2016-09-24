@@ -6,28 +6,36 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-    String sqlCreateTypeUsers= "CREATE TABLE typeUsers"+
-            "(id INTEGER PRIMARY KEY NOT NULL, " +
+    String sqlCreateTypeUserParents= "CREATE TABLE typeUsers"+
+            "(id_typeUser INTEGER PRIMARY KEY NOT NULL, " +
             "typeUser TEXT" +
             "description TEXT)";
 
     String sqlCreateusersParents = "CREATE TABLE usersParents " +
-            "(id INTEGER PRIMARY KEY NOT NULL, " +
-            "typeUser INT" +
+            "(id_Parent INTEGER PRIMARY KEY NOT NULL, " +
+            "typeUserParents INT" +
+            ",email text"+
             "username TEXT" +
             ", password TEXT, " +
-            "fullname TEXT)";
+            "fullname TEXT,"+
+            "CONSTRAINT fk_parent FOREIGN KEY  id_parent REFERENCES usersParents(id_parent))";;
 
     String sqlCreateusersChilds = "CREATE TABLE usersChilds " +
-            "(id INTEGER PRIMARY KEY NOT NULL, " +
+            "(id_Child INTEGER PRIMARY KEY NOT NULL, " +
+            ",email text"+
+            "id_parent INT," +
             "username TEXT" +
-            ", password TEXT, " +
-            "fullname TEXT)";
-    String sqlCreateEvents = "CREATE TABLE Events (id INTEGER PRIMARY KEY NOT NULL," +
+            ",password TEXT, " +
+            "fullname TEXT," +
+            "CONSTRAINT fk_parent FOREIGN KEY  id_parent REFERENCES usersParents(id_parent))";
+
+    String sqlCreateEvents = "CREATE TABLE Events " +
+            "(id_event INTEGER PRIMARY KEY NOT NULL," +
+            ",emailContact text"+
             " name TEXT, " +
             "address TEXT" +
-            ", comments TEXT, " +
-            "score TEXT)";
+            ", description TEXT, " +
+            "Date DATE)";
 
     public DatabaseHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
