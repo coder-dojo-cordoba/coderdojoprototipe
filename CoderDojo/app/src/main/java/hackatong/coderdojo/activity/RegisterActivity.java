@@ -6,7 +6,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
 
-import hackatong.coderdojo.R;
+
 
 public class RegisterActivity extends AppCompatActivity {
 

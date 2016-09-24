@@ -29,4 +29,9 @@
     <string name="tv_nombre_y_apellido_registro">Apellido y nombre</string>
     <string name="btn_registro_registro">Registrarse</string>
     <string name="tv_email">Email</string>
+    <string name="tv_usuario_login">Usuario</string>
+    <string name="tv_contraseña_login">Contraseña</string>
+    <string name="cb_recordar">Recordar contraseña</string>
+    <string name="btn_ingreso">Ingresar</string>
+    <string name="btn_registro">Registrarse</string>
 </resources>
