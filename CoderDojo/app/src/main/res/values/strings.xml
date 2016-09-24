@@ -1,42 +1,32 @@
 <resources>
     <string name="app_name">CoderDojo</string>
-<<<<<<< HEAD
 
-
-NAMe
-    private static final String COLUMN_EMAIL_CONTACT = "emailcontact";
-    private static final String COLUMN_NAME = "Name";
-    private static final String COLUMN_ADDRESS = "address";
-    private static final String COLUMN_DESCRIPTION = "description";
-    private static final String COLUMN_DATE = "date";
     <!--Recursos de Ejemplo-->
-<string-array name="example1">
-        <item>"Practicando con Arduino"</item>
-        <item>"botanicos@dojo.com"</item>
-        <item>"Hipolito Irigoyen 511"</item>
-        <item>"Veni a programar tropio robot! "</item>
-        <item>"23-11-2016"</item>
+    <string-array name="example1">
+            <item>"Practicando con Arduino"</item>
+            <item>"botanicos@dojo.com"</item>
+            <item>"Hipolito Irigoyen 511"</item>
+            <item>"Veni a programar tropio robot! "</item>
+            <item>"23-11-2016"</item>
+        </string-array>
+    <string-array name="example2">
+            <item>"Taller de recursos Botanicos"</item>
+            <item>"botanicos@dojo.com"</item>
+            <item>"San Martin 599"</item>
+            <item>"Veni y ayudanos a distribuir semillas a lo largo de COrdoba"</item>
+            <item>"25-10-2019"</item>
+        </string-array>
+    <string-array name="example3">
+            <item>"Osueando"</item>
+            <item>"Av. Hipólito Irigoyen 651"</item>
+            <item>"A crear niveles que destrozen ese raton"</item>
+            <item>"28-12-2017"</item>
     </string-array>
-<string-array name="example2">
-        <item>"Taller de recursos Botanicos"</item>
-        <item>"botanicos@dojo.com"</item>
-        <item>"San Martin 599"</item>
-        <item>"Veni y ayudanos a distribuir semillas a lo largo de COrdoba"</item>
-        <item>"25-10-2019"</item>
-    </string-array>
-<string-array name="example3">
-        <item>"Osueando"</item>
-        <item>"Av. Hipólito Irigoyen 651"</item>
-        <item>"A crear niveles que destrozen ese raton"</item>
-        <item>"28-12-2017"</item>
-</string-array>
 
-=======
     <string name="tv_usuario_registro">Nombre de usuario</string>
     <string name="tv_contraseña_registro">Contraseña</string>
     <string name="tv_confirmar_contraseña_registro">Repetir contraseña</string>
     <string name="tv_nombre_y_apellido_registro">Apellido y nombre</string>
     <string name="btn_registro_registro">Registrarse</string>
     <string name="tv_email">Email</string>
->>>>>>> 3eca358fd365cfbd4b7076060c9123b9b94b9121
 </resources>
