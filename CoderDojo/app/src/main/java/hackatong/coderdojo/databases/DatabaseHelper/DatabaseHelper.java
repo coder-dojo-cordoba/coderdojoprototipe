@@ -43,7 +43,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(sqlCreateTypeUsers);
+        db.execSQL(sqlCreateTypeUserParents);
         db.execSQL(sqlCreateusersParents);
         db.execSQL(sqlCreateusersChilds);
         db.execSQL(sqlCreateEvents);
@@ -56,7 +56,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         db.execSQL("DROP TABLE IF EXISTS TypeUsers, Parents, users,places");
 
-        db.execSQL(sqlCreateTypeUsers);
+        db.execSQL(sqlCreateTypeUserParents);
         db.execSQL(sqlCreateusersParents);
         db.execSQL(sqlCreateusersChilds);
         db.execSQL(sqlCreateEvents);

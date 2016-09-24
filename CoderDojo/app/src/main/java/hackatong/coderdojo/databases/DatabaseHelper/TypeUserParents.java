@@ -14,7 +14,7 @@ public class EventsDataSource {
     private static final String COLUMN_DESCRIPTION = "description";
 
     private SQLiteDatabase dbHelper;
-    public TypeUsersDataSource(SQLiteDatabase database){
+    public TypeUsersParentsDataSource(SQLiteDatabase database){
         this.dbHelper = database;
     }
 
