@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,6 +8,45 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/black"
+
     tools:context="hackatong.coderdojo.activity.LoginActivity">
 
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="107dp"
+            app:srcCompat="@mipmap/logo"
+            android:id="@+id/imageView2" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:textSize="25dp"
+            android:id="@+id/textView"
+            android:drawableLeft="@mipmap/ninjaUser"
+            android:drawablePadding="5dp"
+            android:background="@color/colorPrimary"
+            />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:textSize="25dp"
+            android:id="@+id/textView2"
+            android:background="@color/colorPrimary"
+            />
+
+    </LinearLayout>
 </RelativeLayout>

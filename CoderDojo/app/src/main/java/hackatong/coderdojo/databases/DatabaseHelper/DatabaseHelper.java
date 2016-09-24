@@ -1,4 +1,4 @@
-package hackatong.coderdojo.databases.DatabaseHelper;
+        package hackatong.coderdojo.databases.DatabaseHelper;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -17,7 +17,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             "typeUser TEXT," +
             "description TEXT);";
 
-    String sqlCreateusersParents = "CREATE TABLE Users " +
+    String sqlCreateusers = "CREATE TABLE Users " +
             "(id_user INTEGER PRIMARY KEY NOT NULL, " +
             "id_typeUser INT," +
             "id_parent INT," +
@@ -44,13 +44,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     //         "CONSTRAINT fk_ChildType " +
     //         "FOREIGN KEY  typeUserChild REFERENCES typeUserChlds(id_typeUserChild))";
 
-    String sqlCreateEvents = "CREATE TABLE Events " +
-            "(id_event INTEGER PRIMARY KEY NOT NULL," +
-            "emailContact text,"+
-            "name TEXT, " +
-            "address TEXT," +
-            "description TEXT, " +
-            "Date DATE)";
 
     String sqlCreateEvents = "CREATE TABLE RegisterEvent " +
             "(id_register INTEGER PRIMARY KEY NOT NULL," +
@@ -70,8 +63,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(sqlCreateTypeUserParents);
-        db.execSQL(sqlCreateusersParents);
-        db.execSQL(sqlCreateusersChilds);
+        db.execSQL(sqlCreateusers);
         db.execSQL(sqlCreateEvents);
 
     }
@@ -83,8 +75,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS TypeUsers, Parents, users,places");
 
         db.execSQL(sqlCreateTypeUserParents);
-        db.execSQL(sqlCreateusersParents);
-        db.execSQL(sqlCreateusersChilds);
+        db.execSQL(sqlCreateusers);
         db.execSQL(sqlCreateEvents);
 
     }
