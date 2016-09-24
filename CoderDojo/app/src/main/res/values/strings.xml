@@ -23,6 +23,28 @@
             <item>"28-12-2017"</item>
     </string-array>
 
+    <!--Recursos de Ejemplo Asistentes-->
+    <string-array name="asistente1">
+        <item>"asistente@1.com"</item>
+        <item>"Asistente 1"</item>
+        <item>""</item>
+    </string-array>
+    <string-array name="asistente2">
+        <item>"asistente@2.com"</item>
+        <item>"Asistente 2"</item>
+        <item>""</item>
+    </string-array>
+    <string-array name="asistente3">
+        <item>"asistente@3.com"</item>
+        <item>"Asistente 3"</item>
+        <item>""</item>
+    </string-array>
+    <string-array name="asistente4">
+        <item>"asistente@4.com"</item>
+        <item>"Asistente 4"</item>
+        <item>""</item>
+    </string-array>
+
     <string name="tv_usuario_registro">Nombre de usuario</string>
     <string name="tv_contraseña_registro">Contraseña</string>
     <string name="tv_confirmar_contraseña_registro">Repetir contraseña</string>
