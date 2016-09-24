@@ -8,6 +8,7 @@ import android.widget.SpinnerAdapter;
 
 import hackatong.coderdojo.R;
 
+
 public class RegisterActivity extends AppCompatActivity {
 
     private Spinner spTipoUsuario;
