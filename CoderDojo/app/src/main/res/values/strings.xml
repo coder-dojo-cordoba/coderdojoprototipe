@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">CoderDojo</string>
+    <string name="tv_usuario_registro">Nombre de usuario</string>
+    <string name="tv_contraseña_registro">Contraseña</string>
+    <string name="tv_confirmar_contraseña_registro">Repetir contraseña</string>
+    <string name="tv_nombre_y_apellido_registro">Apellido y nombre</string>
+    <string name="btn_registro_registro">Registrarse</string>
+    <string name="tv_email">Email</string>
 </resources>
