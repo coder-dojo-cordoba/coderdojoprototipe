@@ -71,7 +71,7 @@ public class EventsDataSource {
             EventsCursor.moveToFirst();
 
             do {
-                String places = EventsCursor.getString(EventsCursor.getColumnIndex("name"))+" - "+placesCursor.getString(placesCursor.getColumnIndex("score"));
+                String places = EventsCursor.getString(EventsCursor.getColumnIndex("name"))+" - "+EventsCursor.getString(EventsCursor.getColumnIndex("score"));
                 eventsList.add(places);
             } while (EventsCursor.moveToNext());
         }

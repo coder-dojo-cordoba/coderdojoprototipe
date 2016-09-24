@@ -65,7 +65,7 @@ public class TypeUserParentsDataSource {
             TypeUsersCursor.moveToFirst();
 
             do {
-                String places = TypeUsersCursor.getString(TypeUsersCursor.getColumnIndex("name"))+" - "+placesCursor.getString(placesCursor.getColumnIndex("score"));
+                String places = TypeUsersCursor.getString(TypeUsersCursor.getColumnIndex("name"))+" - "+TypeUsersCursor.getString(TypeUsersCursor.getColumnIndex("score"));
                 typeUserList.add(places);
             } while (TypeUsersCursor.moveToNext());
         }
