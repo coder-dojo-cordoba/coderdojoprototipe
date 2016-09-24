@@ -2,7 +2,8 @@ package hackatong.coderdojo.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.R.*;
+
+import hackatong.coderdojo.R;
 
 
 public class LoginActivity extends AppCompatActivity {
