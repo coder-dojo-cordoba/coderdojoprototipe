@@ -1,7 +1,9 @@
-package hackatong.coderdojo;
+package hackatong.coderdojo.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import hackatong.coderdojo.R;
 
 public class MainActivity extends AppCompatActivity {
 
