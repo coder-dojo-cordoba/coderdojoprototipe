@@ -1,4 +1,4 @@
-package hackatong.coderdojo.databases
+package hackatong.coderdojo.databases.DatabaseHelper;
 
 import android.content.ContentValues;
 import android.database.Cursor;
@@ -14,7 +14,7 @@ public class TypeUserParentsDataSource {
     private static final String COLUMN_DESCRIPTION = "description";
 
     private SQLiteDatabase dbHelper;
-    public TypeUsersParentsDataSource(SQLiteDatabase database){
+    public TypeUserParentsDataSource(SQLiteDatabase database){
         this.dbHelper = database;
     }
 
