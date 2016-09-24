@@ -6,46 +6,62 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-    String sqlCreateTypeUserParents= "CREATE TABLE typeUsersParents"+
-            "(id_typeUserParent INTEGER PRIMARY KEY NOT NULL, " +
-            "typeUser TEXT" +
-            "description TEXT)" ;
+    // Tabla tipo Usuario, contiene los valores
+    // + Niño menor de 13 años
+    // + Joven de 13 a 17 años
+    // + Adulto / Padre
+    // + Voluntario / Mentor
+    // + Champion
+    String sqlCreateTypeUserParents= "CREATE TABLE TypeUsers"+
+            "(id_typeUser INTEGER PRIMARY KEY NOT NULL, " +
+            "typeUser TEXT," +
+            "description TEXT);";
 
-    String sqlCreateTypeUserChilds= "CREATE TABLE typeUsersChilds"+
-            "(id_typeUserChild INTEGER PRIMARY KEY NOT NULL, " +
-            "typeUser TEXT" +
-            "description TEXT)" ;
-
-    String sqlCreateusersParents = "CREATE TABLE usersParents " +
-            "(id_Parent INTEGER PRIMARY KEY NOT NULL, " +
-            "typeUserParent INT" +
-            ",email text"+
-            "username TEXT" +
-            ", password TEXT, " +
-            "fullname TEXT,"+
-            "CONSTRAINT fk_parentType " +
-            "FOREIGN KEY  typeUserParent REFERENCES typeUserParent(id_typeUser))";
-
-    String sqlCreateusersChilds = "CREATE TABLE usersChilds " +
-            "(id_Child INTEGER PRIMARY KEY NOT NULL, " +
-            ",email text"+
-            "typeUserChild INT" +
+    String sqlCreateusersParents = "CREATE TABLE Users " +
+            "(id_user INTEGER PRIMARY KEY NOT NULL, " +
+            "id_typeUser INT," +
             "id_parent INT," +
-            "username TEXT" +
-            ",password TEXT, " +
-            "fullname TEXT," +
+            "email text,"+
+            "username TEXT," +
+            "password TEXT, " +
+            "name TEXT,"+
+            "lastname TEXT,"+
+            "CONSTRAINT fk_userType " +
+            "FOREIGN KEY  id_typeUser REFERENCES TypeUsers(id_typeUser)," +
             "CONSTRAINT fk_parent " +
-            "FOREIGN KEY  id_parent REFERENCES usersParents(id_parent))"+
-            "CONSTRAINT fk_ChildType " +
-            "FOREIGN KEY  typeUserChild REFERENCES typeUserChlds(id_typeUserChild))";;
+            "FOREIGN KEY  id_parent REFERENCES Users(id_user))";
+
+    // String sqlCreateusersChilds = "CREATE TABLE usersChilds " +
+    //         "(id_Child INTEGER PRIMARY KEY NOT NULL, " +
+    //         ",email text"+
+    //         "typeUserChild INT" +
+    //         "id_parent INT," +
+    //         "username TEXT" +
+    //         ",password TEXT, " +
+    //         "fullname TEXT," +
+    //         "CONSTRAINT fk_parent " +
+    //         "FOREIGN KEY  id_parent REFERENCES usersParents(id_parent))"+
+    //         "CONSTRAINT fk_ChildType " +
+    //         "FOREIGN KEY  typeUserChild REFERENCES typeUserChlds(id_typeUserChild))";
 
     String sqlCreateEvents = "CREATE TABLE Events " +
             "(id_event INTEGER PRIMARY KEY NOT NULL," +
-            ",emailContact text"+
-            " name TEXT, " +
-            "address TEXT" +
-            ", description TEXT, " +
+            "emailContact text,"+
+            "name TEXT, " +
+            "address TEXT," +
+            "description TEXT, " +
             "Date DATE)";
+
+    String sqlCreateEvents = "CREATE TABLE RegisterEvent " +
+            "(id_register INTEGER PRIMARY KEY NOT NULL," +
+            "id_user INT,"+
+            "id_event INT,"+
+            "name TEXT, " +
+            "Date DATE, " +
+            "CONSTRAINT fk_user " +
+            "FOREIGN KEY  id_user REFERENCES Users(id_user)," +
+            "CONSTRAINT fk_event " +
+            "FOREIGN KEY  id_event REFERENCES Events(id_event))";
 
     public DatabaseHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
